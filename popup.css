@@ -1,53 +1,61 @@
+/* Main container styling for popup */
 .container {
-  width: 280px;
-  color: #314d3e;
+  width: 280px;           /* Standard Chrome extension popup width */
+  color: #314d3e;         Primary text color matching YouTube's dark theme */
 }
 
+/* Title section styling */
 .title {
-  font-size: 14px;
-  font-weight: bold;
-  padding: 8px;
+  font-size: 14px;        /* Readable header size */
+  font-weight: bold;      /* Emphasize section title */
+  padding: 8px;           /* Comfortable spacing around text */
 }
 
+/* Text input field styling */
 .textbox {
-  width: 100%;
-  font-size: 12px;
-  margin: 0;
-  padding: 0px 2px;
+  width: 100%;            /* Full container width */
+  font-size: 12px;        /* Matches Chrome's UI conventions */
+  margin: 0;              /* Remove default browser margins */
+  padding: 0px 2px;      /* Compact internal spacing */
+
+  /* Focus state styling */
+  .textbox:focus {
+    outline: 0;           /* Remove default browser outline */
+    border-color: #66afe9; /* YouTube-branded focus color */
+  }
 }
 
-.textbox:focus {
-  outline: 0;
-  border-color: #66afe9;
-}
-
+/* Bookmarks list container */
 .bookmarks {
-  margin: 5px 5px;
-  padding: 3px;
+  margin: 5px 5px;        /* Consistent outer spacing */
+  padding: 3px;           /* Internal padding for visual balance */
 }
 
+/* Individual bookmark item styling */
 .bookmark {
-  display: flex;
-  border-bottom-color: #00254d;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-radius: 0.8rem;
-  padding: 3px;
-  padding-bottom: 7px;
-  margin-bottom: 7px;
+  display: flex;           /* Flex layout for controls alignment */
+  border-bottom: 1px solid #00254d; /* Visual separation between items */
+  border-radius: 0.8rem;   /* Modern rounded corners */
+  padding: 3px;           /* Internal spacing */
+  padding-bottom: 7px;    /* Extra bottom padding for visual weight */
+  margin-bottom: 7px;     /* Vertical spacing between bookmarks */
 }
 
+/* Bookmark title text styling */
 .bookmark-title {
-  padding-left: 2px;
+  padding-left: 2px;      /* Alignment with control icons */
 }
 
+/* Control icons styling */
 .bookmark-controls img {
-  margin: 0 4px;
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
+  margin: 0 4px;          /* Horizontal spacing between icons */
+  width: 18px;            /* Standard icon size */
+  height: 18px;           /* Maintain aspect ratio */
+  cursor: pointer;       /* Indicate interactivity */
 }
+
+/* Controls container layout */
 .bookmark-controls {
-  flex: auto;
-  text-align: right;
+  flex: auto;             /* Take remaining space */
+  text-align: right;      /* Right-align control icons */
 }
