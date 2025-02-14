@@ -10,11 +10,11 @@
   
   // Background service worker setup
   "background": {
-    "service_worker": "background.js"     // Main extension logic handler
+    "service_worker": "background.js"     // Main extension logic handler. A javascript file that runs separately from the main browser thread. One of the big changes from V2 to V3 (the other is 'Chrome Assist'(?)). Can speak to the extension using the extension's messaging system.
   },
   
   // Content scripts injection
-  "content_scripts": [{
+  "content_scripts": [{                     // files that run in context of the web pages we're on. Use to manipulate the DOM.
     "matches": ["https://*.youtube.com/*"], // Inject into all YouTube pages
     "js": ["contentScript.js"]              // Main content script
   }],
@@ -38,7 +38,7 @@
       "32": "assets/ext-icon.png"
     },
     "default_title": "My YT Bookmarks",    // Tooltip text
-    "default_popup": "popup.html"          // Popup UI entry point
+    "default_popup": "popup.html"          // Popup UI entry point i.e. what is your UI? In this case we specify it's the popup.html file, and within that we specify the popup.js file helps it with its interactivity.
   },
   
   // Manifest version (must be 3 for Chrome Extensions)
