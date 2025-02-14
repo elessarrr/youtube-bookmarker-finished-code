@@ -5,7 +5,7 @@
   "description": "Saving timestamps in YT videos",
   
   // Required permissions
-  "permissions": ["storage", "tabs"],       // Access browser storage and tabs API
+  "permissions": ["storage", "tabs"],       // Access browser storage (on user's computer) and tabs API (access browser's tab system, grab url of the tab they're on).
   "host_permissions": ["https://*.youtube.com/*"],  // Only work on YouTube domains
   
   // Background service worker setup
