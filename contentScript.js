@@ -1,6 +1,6 @@
 (() => {
   // DOM element references
-  let youtubeLeftControls, youtubePlayer;
+  let youtubeLeftControls, youtubePlayer; //access the controls, access the yt player.
   // State management
   let currentVideo = "";
   let currentVideoBookmarks = [];
